@@ -15,11 +15,11 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Greeting
 {
     /**
-     * @var int The entity Id
+     * @var string The entity Id
      *
      * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="UUID")
+     * @ORM\Column(type="string")
      */
     private $id;
 
@@ -31,7 +31,7 @@ class Greeting
      */
     public $name = '';
 
-    public function getId(): int
+    public function getId(): string
     {
         return $this->id;
     }
