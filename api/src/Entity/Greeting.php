@@ -19,7 +19,7 @@ class Greeting
      *
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="UUID")
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="guid")
      */
     private $id;
 
